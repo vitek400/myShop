@@ -9,21 +9,3 @@ public class Discounts {
         } while (n>0);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
