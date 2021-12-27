@@ -13,9 +13,11 @@ public class Main {
         }
     }
     private static boolean productNotPaid() {
+
         return false;
     }
     private static boolean productPaidFor() {
+
         return true;
     }
 }
