@@ -5,10 +5,7 @@ public class Storage {
         int n = 10;
         while (n <= 50) {
             n++;
-
             System.out.println("Товар на складе в достаточном количестве");
-
-
         }
     }
 }
