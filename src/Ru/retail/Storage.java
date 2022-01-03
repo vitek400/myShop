@@ -14,9 +14,8 @@ public class Storage {
         this.taskExists = taskExists;
     }
 
-    int n = 10;
-        while (n <= 50) {
-            n++;
-            System.out.println("Товар на складе в достаточном количестве");
+   // int n = 10;
+    //    while (n <= 50) {
+  //          n++;
+   //         System.out.println("Товар на складе в достаточном количестве");
         }
-    }
