@@ -1,5 +1,7 @@
 package Ru.retail;
 
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
         int [] stock = new int[10]; //запас товара на складе
@@ -8,6 +10,12 @@ public class Main {
             System.out.println(stock[i]);
         }for (int i: stock){
             System.out.println(i);
+        }
+        String [] names = {"Order","Client","Product","Storage","Discounts"};
+        int index=0;
+        while (index < names.length){
+            System.out.println(names[index]);
+            index++;
         }
     }
 }
@@ -43,4 +51,3 @@ public class Main {
  //   private static boolean productPaidFor() {
   //      return true;
   //  }
-//}
