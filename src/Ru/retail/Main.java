@@ -6,6 +6,8 @@ public class Main {
         for(int i=0; i<10; i++){
             stock[i] = i+1;
             System.out.println(stock[i]);
+        }for (int i: stock){
+            System.out.println(i);
         }
     }
 }
