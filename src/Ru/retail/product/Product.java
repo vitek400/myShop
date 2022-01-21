@@ -1,17 +1,18 @@
 package Ru.retail.product;
 
-public class Product {
-     private String name;
-     private String state;
-     private int id;
-     private double price;
+public abstract  class Product {
+    private String name;
+    private String state;
+    private int id;
+    private double price;
 
-     public  Product(String name, String state,int id, double price){
-         this.name = name;
-         this.state = state;
-         this.id = id;
-         this.price = price;
-     }
+    public Product(String name, String state, int id, double price) {
+        this.name = name;
+        this.state = state;
+        this.id = id;
+        this.price = price;
+    }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -27,12 +28,28 @@ public class Product {
     public void setState(String state) {
         this.state = state;
     }
-    //  int i//позиция в корзине
-        //  int j//кол-во шт 1 позиции в корзине
-   //     for(int i = 1; i <= 10; i++){
-      //      for(int j = 1; j <= 5; j++){
-      //          int multiplay = i*j;//-кол-во товара в корзине
-      //          System.out.println(multiplay);
-            }
-      //  }
-  //  }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+//  int i//позиция в корзине
+    //  int j//кол-во шт 1 позиции в корзине
+    //     for(int i = 1; i <= 10; i++){
+    //      for(int j = 1; j <= 5; j++){
+    //          int multiplay = i*j;//-кол-во товара в корзине
+    //          System.out.println(multiplay);
+    //  }
+    //  }
+}
