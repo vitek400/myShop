@@ -1,6 +1,6 @@
 package Ru.retail.purchaseReturn;
 
-public abstract class PurchaseReturn {
+public  class PurchaseReturn {
     private String name;
     private String productCondition;
     private int idProduct;
@@ -11,12 +11,7 @@ public abstract class PurchaseReturn {
         this.idProduct = idProduct;
     }public void setProductCondition(String productCondition) {
         this.productCondition = productCondition;
-    }public void returnTheGoods(){
-        System.out.println("возврат товара");
-    } public void exchangeForAnaloG(){
-    } public void repairOfGoods(){
     }
-
     public String getName() {
         return name;
     }

@@ -10,4 +10,5 @@ public class ServiceDiscount extends Discounts{
     public void setServicePeriod(byte servicePeriod) {
         this.servicePeriod = servicePeriod;
     }
+
 }

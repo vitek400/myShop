@@ -1,32 +1,30 @@
 package Ru.retail.discounts;
 
-public abstract class Discounts {
-    private int idProduct;
-    private int dateOfStart;
-    private int dateOfTheEnd;
+public  class Discounts {
+    private String dateOfStart;
+    private String dateOfTheEnd;
     private String kindOfDiscount;
 
-    public int getIdProduct() {
-        return idProduct;
+    public Discounts(String dateOfStart, String dateOfTheEnd, String kindOfDiscount) {
     }
 
-    public void setIdProduct(int idProduct) {
-        this.idProduct = idProduct;
+    public Discounts() {
+
     }
 
-    public int getDateOfStart() {
+    public String getDateOfStart() {
         return dateOfStart;
     }
 
-    public void setDateOfStart(int dateOfStart) {
-        this.dateOfStart = dateOfStart;
+    public void setDateOfStart(String dateOfStart) {
+        this.dateOfStart = String.valueOf(dateOfStart);
     }
 
-    public int getDateOfTheEnd() {
+    public String getDateOfTheEnd() {
         return dateOfTheEnd;
     }
 
-    public void setDateOfTheEnd(int dateOfTheEnd) {
+    public void setDateOfTheEnd(String dateOfTheEnd) {
         this.dateOfTheEnd = dateOfTheEnd;
     }
 
@@ -36,14 +34,5 @@ public abstract class Discounts {
 
     public void setKindOfDiscount(String kindOfDiscount) {
         this.kindOfDiscount = kindOfDiscount;
-    }
-
-    public Discounts (int idProduct, int dateOfStart, int dateOfTheEnd, String kindOfDiscount){
-        this.idProduct = idProduct;
-        this.dateOfStart = dateOfStart;
-        this.dateOfTheEnd = dateOfTheEnd;
-        this.kindOfDiscount = kindOfDiscount;
-    }
-    public Discounts() {
     }
 }

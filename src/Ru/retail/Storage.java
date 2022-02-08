@@ -4,18 +4,17 @@ public class Storage {
     private String name;
     private String taskExists;
 
-    public Storage(String name,String taskExists){
+    public Storage(String name){
         this.name = name;
         this.taskExists = taskExists;
-    }public void setName(String name) {
-        this.name = name;
     }
+    Storage storage = new Storage("Склад");
+
+    public String getName() {return name;}
+    public void setName(String name) {this.name = name;}
+    public static String getName(String name){return name;}
     public void setTaskExists(String taskExists) {
         this.taskExists = taskExists;
+        System.out.println("Товар" + this.name + "зарезервирован на складе");
     }
-
-   // int n = 10;
-    //    while (n <= 50) {
-  //          n++;
-   //         System.out.println("Товар на складе в достаточном количестве");
-        }
+  }
