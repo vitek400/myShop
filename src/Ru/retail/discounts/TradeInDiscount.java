@@ -11,4 +11,5 @@ public class TradeInDiscount extends  Discounts{
     public void setProductCondition(String productCondition) {
         this.productCondition = productCondition;
     }
+
 }

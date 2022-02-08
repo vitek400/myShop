@@ -1,55 +1,48 @@
 package Ru.retail.product;
 
-public abstract  class Product {
+import static java.lang.System.*;
+
+public   class Product {
     private String name;
     private String state;
-    private int id;
-    private double price;
+    private String id;
+    private String price;
+    private String barcode;
+    private String storage;
 
-    public Product(String name, String state, int id, double price) {
+    public Product(String name, String state, String  id, String price,String barcode,String storage) {
         this.name = name;
         this.state = state;
         this.id = id;
         this.price = price;
+        this.barcode= barcode;
+        this.storage= storage;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    public String getName() {return name;}
 
     public void setState(String state) {
         this.state = state;
+        out.println("Товару" + "  "+ this.name +"  " + "присвоен статус" + "  "+ state);
+    }
+public void setName(String name){this.name = name;}
+
+    public String getState() {return state;}
+
+    public void setBarcode(String barcode) {
+        this.barcode = barcode;
+        out.println("Товару" + "  " + this.name + "  "  + "присвоен баркод" + "  " + barcode);
+    }
+    public String getPrice(){return price;}
+    public void setPrice(String price) {
+        this.price = price;
+        out.println("Товару" + "  " + getName()+ "  " + "установлена цена" + " " + getPrice());
     }
 
-    public String getName() {
-        return name;
+    public void setOrder(String s) {
+    }
+    public void acceptProduct(String склад) {
+        out.println("Произведен прием товара" +" "+  name + " " + "на складе");
+    }
     }
 
-    public String getState() {
-        return state;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-//  int i//позиция в корзине
-    //  int j//кол-во шт 1 позиции в корзине
-    //     for(int i = 1; i <= 10; i++){
-    //      for(int j = 1; j <= 5; j++){
-    //          int multiplay = i*j;//-кол-во товара в корзине
-    //          System.out.println(multiplay);
-    //  }
-    //  }
-}
