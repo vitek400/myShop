@@ -3,11 +3,23 @@ package Ru.retail;
 import Ru.retail.discounts.AccumDiscount;
 import Ru.retail.product.Uneatable;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
+        ArrayList<Client> clients= new ArrayList<>(50);
+        Client petr = new Client("Петр","258741","741852");
+        Client ivanko = new Client("Иванко","258571","123654");
+        Client valentin = new Client("Валентин","274181","741852");
+        Client denis = new Client("Денис","528964","789624");
+        clients.add(petr);
+        clients.add(ivanko);
+        clients.add(valentin);
+        clients.add(denis);
         Uneatable toy = new Uneatable("Радиоуправляемый вертолет","Пхеньян","73023","3000","8547","склад");
         Uneatable washingPowder = new Uneatable("Персил","Мехико","74258","680","369874","склад");
         Client sergey = new Client("Сергей", "первый", "201");
+        clients.add(sergey);
         Order order = new Order("радиоуправляемый вертолет, персил","Одесса","Сергей","безналичная оплата","03.03.2022","г.Одесса,ул.Школьная,д.2");
         toy.acceptProduct("склад");
         toy.setBarcode("8547");
