@@ -10,11 +10,11 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         List<Client> clients = new ArrayList();
-        client.append( new Client("Петр",     "258741", "741852") );
-        client.append( new Client("Иванко",   "258571", "123654") );
-        client.append( new Client("Валентин", "274181", "741852") );
-        client.append( new Client("Денис",    "528964", "789624") );
-        client.append( new Client("Сергей",   "первый", "201"   ) );
+        client.add( new Client("Петр",     "258741", "741852") );
+        client.add( new Client("Иванко",   "258571", "123654") );
+        client.add( new Client("Валентин", "274181", "741852") );
+        client.add( new Client("Денис",    "528964", "789624") );
+        client.add( new Client("Сергей",   "первый", "201"   ) );
         
         Uneatable toy = new Uneatable("Радиоуправляемый вертолет","Пхеньян","73023","3000","8547","склад");
         toy.acceptProduct("склад");
