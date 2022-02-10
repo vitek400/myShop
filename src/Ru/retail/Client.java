@@ -3,6 +3,8 @@ package Ru.retail;
 import Ru.retail.discounts.Discount;
 import Ru.retail.product.Product;
 
+import java.util.List;
+
 public  class Client implements Discount {
     private String name;
     private String order;
@@ -14,23 +16,45 @@ public  class Client implements Discount {
         this.bankAccount = bankAccount;
     }
 
-    public String getName() {return name;}
-    public void setName(String name) {this.name = name;}
-    public String getOrder() {return order;}
-    public void setOrder(String order) {this.order = order;
-        System.out.println("Заказу присвоен номер"+ " " + order);}
-    public String getBankAccount() {return bankAccount;}
-    public void setBankAccount(String bankAccount) {this.bankAccount = bankAccount;}
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getOrder() {
+        return order;
+    }
+
+    public void setOrder(String order) {
+        this.order = order;
+        System.out.println("Заказу присвоен номер" + " " + order);
+    }
+
+    public String getBankAccount() {
+        return bankAccount;
+    }
+
+    public void setBankAccount(String bankAccount) {
+        this.bankAccount = bankAccount;
+    }
+
     public void putInBasket(Product product) {
-        System.out.println("Покупатель" + " " + name + " "+ "положил товар" + " "+ product.getName()+ " " + "в корзину");
+        System.out.println("Покупатель" + " " + name + " " + "положил товар" + " " + product.getName() + " " + "в корзину");
         product.setState("Зарезервировано");
     }
-    public void payOrder(String state,String client,String paymentType){
-        System.out.println("Заказ оплачен в городе" + " " +  state+ " "+  "клиентом" +" "+  client + ","+ "вид оплаты" + " " + paymentType);
+
+    public void payOrder(String state, String client, String paymentType) {
+        System.out.println("Заказ оплачен в городе" + " " + state + " " + "клиентом" + " " + client + "," + "вид оплаты" + " " + paymentType);
     }
+
     @Override
     public void accumDiscount() {
-        System.out.println("Покупателю" + " " + getName()+ " "+ "была оформлена дисконтная карта с накопительной скидкой");
+        System.out.println("Покупателю" + " " + getName() + " " + "была оформлена дисконтная карта с накопительной скидкой");
+    }
 
-    }
-    }
+
+
+}

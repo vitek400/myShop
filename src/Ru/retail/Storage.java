@@ -1,5 +1,10 @@
 package Ru.retail;
 
+import Ru.retail.product.Product;
+import Ru.retail.product.Uneatable;
+
+import java.util.ArrayList;
+
 public class Storage {
     private String name;
     private String taskExists;
@@ -17,4 +22,4 @@ public class Storage {
         this.taskExists = taskExists;
         System.out.println("Товар" + this.name + "зарезервирован на складе");
     }
-  }
+    }
