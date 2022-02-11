@@ -9,12 +9,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List<Client> clients = new ArrayList<Client>();
-        clients.add( new Client("Петр",     "258741", "741852") );
-        clients.add( new Client("Иванко",   "258571", "123654") );
-        clients.add( new Client("Валентин", "274181", "741852") );
-        clients.add( new Client("Денис",    "528964", "789624") );
-        clients.add( new Client("Сергей",   "первый", "201"   ) );
+        List <Client> clients = Client.getAll();
         
         Uneatable toy = new Uneatable("Радиоуправляемый вертолет","Пхеньян","73023","3000","8547","склад");
         toy.acceptProduct("склад");
