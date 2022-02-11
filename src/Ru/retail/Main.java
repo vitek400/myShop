@@ -32,7 +32,9 @@ public class Main {
         clients.get(4).payOrder("Одесса", "Сергей", "оплата по карте");
         orders.get(1).transferDelivery();
         orders.get(1).delivery();
-
+        orders.get(0).returnTheProduct();
+        orders.get(0).exchangeForAnaloG();
+        orders.get(0).repairOfProduct();
     }
 
 }

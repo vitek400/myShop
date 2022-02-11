@@ -44,15 +44,15 @@ public class Order implements PurchaseReturns {
 
     @Override
     public void returnTheProduct() {
-        System.out.println("Был произведен возврат покупки");
+        System.out.println("Был произведен возврат покупки"+" "+getProductList() );
     }
     @Override
     public void exchangeForAnaloG() {
-        System.out.println("Была произведена замена товара на аналогичный");
+        System.out.println("Была произведена замена товара" + " "+getProductList()+" на аналогичный");
     }
     @Override
     public void repairOfProduct() {
-        System.out.println("Возвращенный товар был отправлен в сервис-центр");
+        System.out.println("Возвращенный товар"+ " "+ getProductList()+" был отправлен в сервис-центр");
     }
 
     public static List<Order> getAll(){
