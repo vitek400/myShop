@@ -55,7 +55,13 @@ public  class Client implements Discount {
     public void accumDiscount() {
         System.out.println("Покупателю" + " " + getName() + " " + "была оформлена дисконтная карта с накопительной скидкой");
     }
-   public static List<Client> getAll() {
+
+    @Override
+    public void volumeDiscount() {
+        System.out.println("Покупателю" + " " + getName() + " " + "была сделана скидка 5% на повторный заказ");
+    }
+
+    public static List<Client> getAll() {
        List<Client> clients = new ArrayList<Client>();
        clients.add(new Client("Петр", "258741", "741852"));
        clients.add(new Client("Иванко", "258571", "123654"));

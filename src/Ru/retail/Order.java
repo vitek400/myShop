@@ -3,6 +3,9 @@ package Ru.retail;
 import Ru.retail.product.Product;
 import Ru.retail.purchaseReturn.PurchaseReturns;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Order implements PurchaseReturns {
     private String productList;
     private String state;
@@ -38,6 +41,7 @@ public class Order implements PurchaseReturns {
     public void delivery(){
         System.out.println("Заказ"+ " "+ getProductList() + " "+ "доставлен покупателю"+ " "+getClient()+ " "+"по адресу:" + " "+getDeliveryAdress());
     }
+
     @Override
     public void returnTheProduct() {
         System.out.println("Был произведен возврат покупки");
@@ -51,4 +55,10 @@ public class Order implements PurchaseReturns {
         System.out.println("Возвращенный товар был отправлен в сервис-центр");
     }
 
+    public static List<Order> getAll(){
+        List<Order> orders = new ArrayList<Order>();
+        orders.add(new Order("радиоуправляемый вертолет","Одесса","Сергей","безналичная оплата","03.03.2022","г.Одесса,ул.Школьная,д.2"));
+        orders.add(new Order("порошок Персил","Одесса","Сергей","безналичная оплата","05.03.2022","г.Одесса,ул.Школьная,д.2"));
+    return orders;
+    }
 }
