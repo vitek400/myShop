@@ -5,6 +5,7 @@ import Ru.retail.product.Product;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NavigableSet;
 
 public  class Client implements Discount {
     private String name;
@@ -69,7 +70,8 @@ public  class Client implements Discount {
        clients.add(new Client("Денис", "528964", "789624"));
        clients.add(new Client("Сергей", "первый", "201"));
        return clients;
+       }
+       public String toString(){
+        return  getName();
+       }
    }
-
-
-}

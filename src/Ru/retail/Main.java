@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List <Client> clients = Client.getAll();
+        List<Client> clients = Client.getAll();
         List<Product> products = Product.getAll();
         products.get(0).acceptProduct("склад");
         products.get(0).setBarcode("8547");
@@ -35,8 +35,10 @@ public class Main {
         orders.get(0).returnTheProduct();
         orders.get(0).exchangeForAnaloG();
         orders.get(0).repairOfProduct();
+        if (clients.contains(clients.get(0))) {
+            System.out.println("В списке клиентов присутствует клиент" +" "+ clients.get(0));
+        }
     }
-
 }
 
 
