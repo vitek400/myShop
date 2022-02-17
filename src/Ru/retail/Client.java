@@ -3,8 +3,9 @@ package Ru.retail;
 import Ru.retail.discounts.Discount;
 import Ru.retail.product.Product;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.NavigableSet;
 
 public  class Client implements Discount {
     private String name;
@@ -56,15 +57,21 @@ public  class Client implements Discount {
         System.out.println("Покупателю" + " " + getName() + " " + "была оформлена дисконтная карта с накопительной скидкой");
     }
 
-    static public List<Client> getAll() {
-        List<Client> clients = new ArrayList<Client>();
-        clients.add( new Client("Петр",     "258741", "741852") );
-        clients.add( new Client("Иванко",   "258571", "123654") );
-        clients.add( new Client("Валентин", "274181", "741852") );
-        clients.add( new Client("Денис",    "528964", "789624") );
-        clients.add( new Client("Сергей",   "первый", "201"   ) );
-
-        return clients;
+    @Override
+    public void volumeDiscount() {
+        System.out.println("Покупателю" + " " + getName() + " " + "была сделана скидка 5% на повторный заказ");
     }
 
-}
+    public static List<Client> getAll() {
+       List<Client> clients = new ArrayList<Client>();
+       clients.add(new Client("Петр", "258741", "741852"));
+       clients.add(new Client("Иванко", "258571", "123654"));
+       clients.add(new Client("Валентин", "274181", "741852"));
+       clients.add(new Client("Денис", "528964", "789624"));
+       clients.add(new Client("Сергей", "первый", "201"));
+       return clients;
+       }
+       public String toString(){
+        return  getName();
+       }
+   }
