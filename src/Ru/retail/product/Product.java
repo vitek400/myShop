@@ -1,5 +1,8 @@
 package Ru.retail.product;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static java.lang.System.*;
 
 public   class Product {
@@ -18,7 +21,12 @@ public   class Product {
         this.barcode= barcode;
         this.storage= storage;
     }
-
+    public static List<Product> getAll(){
+        List<Product> products = new ArrayList<Product>();
+        products.add(new Product("Радиоуправляемый вертолет","Пхеньян","73023","3000","8547","склад"));
+        products.add(new Product("порошок Персил","Мехико","74258","680","369874","склад"));
+        return products;
+    }
     public String getName() {return name;}
 
     public void setState(String state) {

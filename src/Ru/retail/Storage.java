@@ -4,6 +4,7 @@ import Ru.retail.product.Product;
 import Ru.retail.product.Uneatable;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Storage {
     private String name;
@@ -22,4 +23,6 @@ public class Storage {
         this.taskExists = taskExists;
         System.out.println("Товар" + this.name + "зарезервирован на складе");
     }
+
+
     }
