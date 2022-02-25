@@ -4,6 +4,9 @@ import Ru.retail.discounts.AccumDiscount;
 import Ru.retail.product.Product;
 import Ru.retail.product.Uneatable;
 
+import java.io.DataOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,10 +39,20 @@ public class Main {
         orders.get(0).exchangeForAnaloG();
         orders.get(0).repairOfProduct();
         if (clients.contains(clients.get(0))) {
-            System.out.println("В списке клиентов присутствует клиент" +" "+ clients.get(0));
+            System.out.println("В списке клиентов присутствует клиент" + " " + clients.get(0));
+        }
+            try (DataOutputStream doc = new DataOutputStream(new FileOutputStream("example.txt"))) {
+                doc.writeUTF(String.valueOf(clients.get(2)));
+                doc.writeInt(59);
+                doc.writeInt(2);
+                doc.writeInt(8);
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
-}
+
 
 
 
