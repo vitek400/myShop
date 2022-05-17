@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h1>Добро пожаловать в личный кабинет</h1>
+
+<p>Здесь хранится история ваших заказов</p>
+
+<p> Диапазон поиска заказа по дате: </p><br>
+<div>
+    <form action="/action_page.php">
+      <label for="datemin">Введите примерную дату начала поиска:</label>
+      <input type="date" id="datemin" name="datemin" min="2010-01-02"><br><br>
+
+     <label for="datemax">Введите примерную дату окончания поиска:</label>
+     <input type="date" id="datemax" name="datemax" max="2022-05-31"><br><br>
+		
+	 <input type="submit" value="Search">
+    </form>
+</div>
+
+
+<div>
+    <p><a href="./viewBasket.html">Корзина</a>  </p>
+</div>
+</body>
+</html>
