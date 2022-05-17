@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {background-color:pink;}
+h1   {color: purple;}
+p    {color: purple;}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+</style>
+</head>
+<body>
+<ul>
+  <li><a href="./viewCatalog.html"> Каталог товаров </a></li>
+  <li><a href="./viewProfile.html"> Личный профиль </a></li>
+  <li><a href="./viewBasket.html"> Корзина </a></li>
+  <li><a href="./viewAbout.html"> О нас </a></li>
+</ul>
+<h1 style="text-align:center;"> Добро пожаловать в наш онлайн-магазин детских товаров</h1>
+<img src = "C:\Users\Лидия\Desktop\MyOnlineShopApp\изображения\дваМедведя.jpg"  width="260" height="200">
+<div>
+
+<p>Здесь можно узнать наличие товаров на складе</p>
+
+<div>
+    <form action=""/action_page.php" method="get">
+        <label for="name">Введите наименование товара для поиска:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="category">Выбор категории товара:</label><br>
+		<select id="category" name="category">
+        <option value="toys">Игрушки</option>
+        <option value="clothes">Детская одежда</option>
+        <option value="shoes">Обувь</option>
+        <option value="diapers">Подгузники</option>
+        </select><br>
+        <label for="brand name">Выбор бренда:</label><br>
+		<select id="brand name" name="brand name">
+        <option value="Polesie">Polesie</option>
+        <option value="Modami">Modami</option>
+        <option value="Totosha">Totosha</option>
+        <option value="Kasper">Kasper</option>
+        </select><br>
+		<label for="color">Выбор цвета:</label><br><br>
+        <input type="color" id="color" name="color" value="#ff0000"><br><br>
+		<label for="price">Цена товара:</label><br>
+        <input type="text" id="price" name="price"><br>
+		<label for="delivery">Доставка:</label><br>
+		<select id="delivery" name="delivery">
+        <option value="expressDelivery">курьерская доставка</option>
+        <option value="pickup">самовывоз</option>
+        <option value="postamat" selected>постамат</option>
+        <option value="postOffice">почта России</option>
+        </select><br>
+		<label for="gender">Пол ребенка:</label><br>
+		<select id="gender" name="gender">
+        <option value="boy">мальчик</option>
+        <option value="girl">девочка</option>
+        </select><br><br>
+        <input type="submit" value="Search">
+    </form>
+</div><br><br>
+
+</body>
+</html>

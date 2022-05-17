@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h1>Форма добавления клиента в базу(для администратора)</h1>
+
+
+<div>
+    <form action="/client" method="post">
+        <label for="surName">Фамилия клиента:</label><br>
+        <input type="text" id="surName" name="surName"><br>
+        <label for="name">Имя клиента:</label><br>
+        <input type="text" id="name" name="name"><br>
+		<label for="patronymic">Отчество клиента:</label><br>
+        <input type="text" id="patronymic" name="patronymic"><br>
+		<label for="birthday">Дата рождения клиента:</label><br>
+		 <input type="date" id="birthday" name="birthday"><br>
+		<label for="phoneNumber">Номер телефона:</label><br>
+		<input type="text" id="phoneNumber" name="phoneNumber"><br>
+        <label for="email">E-mail:</label><br>
+        <input type="text" id="email" name="email"><br><br>
+        <input type="submit" value="Add">
+    </form>
+</div>
+
+<div>
+    <p><a href="./">Вернуться на страницу администратора</a></p>
+</div>
+</body>
+</html>
